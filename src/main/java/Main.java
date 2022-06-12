@@ -47,6 +47,14 @@ public class Main {
         thread1.start();
         thread2.start();
 
+        try {
+            thread1.join();
+            thread2.join();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+
+
         float[] arr3 = new float[s];
         System.arraycopy(arr1, 0, arr3, 0, h);
         System.arraycopy(arr2, 0, arr3, h, h);
