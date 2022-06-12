@@ -34,7 +34,7 @@ public class EchoClient {
     }
 
     private void openConnection() throws IOException {
-        socket = new Socket("127.0.0.1", 8189);
+        socket = new Socket("127.0.0.1", 8190);
         in = new DataInputStream(socket.getInputStream());
         out = new DataOutputStream(socket.getOutputStream());
         new Thread(() -> {
