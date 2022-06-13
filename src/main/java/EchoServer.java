@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class EchoServer {
     public static void main(String[] args) {
-        try (ServerSocket serverSocket = new ServerSocket(8190)) {
+        try (ServerSocket serverSocket = new ServerSocket(8189)) {
             System.out.println("Ждем подключения клиента... ");
             Socket socket = serverSocket.accept();
             System.out.println("Клиент подключился!");
@@ -27,6 +27,7 @@ public class EchoServer {
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
+                    break;
                 }
             }).start();
 
